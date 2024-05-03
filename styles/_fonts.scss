@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+$main-font-family: "Montserrat";
+
+$primary-color: #ffffff;
+$dark-color: #2c4058;
+
+$base-font-size: 1rem;
+
+$bg-gradient: linear-gradient(243.43deg, #7e5aff 16.9%, #55b7ff 83.27%);
+
+@mixin logo($base-font-size) {
+  color: $primary-color;
+  font-family: $main-font-family;
+  font-size: $base-font-size;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@mixin upper-text($base-font-size) {
+  text-transform: uppercase;
+  font-family: $main-font-family;
+  font-size: $base-font-size;
+}

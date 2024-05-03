@@ -1,1 +1,115 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+body {
+  color: #ffffff;
+  animation: fadeInAnimation ease 1500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.flex-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(243.43deg, #7e5aff 16.9%, #55b7ff 83.27%);
+  overflow-y: hidden;
+  width: 100vw;
+  height: 800px;
+  position: relative;
+}
+.flex-header .top-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 10vh;
+  position: absolute;
+  top: 0;
+}
+.flex-header .top-nav .nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 40vw;
+  list-style: circle;
+}
+.flex-header .main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.flex-header .main-header h1 {
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.flex-header .main-header h4 {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.flex-header .side-elips {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  position: fixed;
+  right: 52px;
+}
+.flex-header .bottom-arrow {
+  position: absolute;
+  bottom: 52px;
+}
+.flex-header .bg-header-img {
+  position: absolute;
+  top: 0;
+  opacity: 0.06;
+  height: 100vh;
+  zoom: 1.25;
+}
+.flex-header .socialMedia-nav svg {
+  margin: 1rem;
+}
+
+.list-active {
+  list-style-type: disc;
+}
+
+#whatWeDo {
+  margin-top: 100px;
+}
+#whatWeDo .header-what-we-do {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#whatWeDo .header-what-we-do h2 {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 2.75rem;
+  margin-top: 24px;
+  color: #2c4058;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,106 @@
+@use "./fonts" as *;
+
+@mixin flex-container($flex-direction, $justfy-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justfy-content;
+  align-items: $align-items;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $main-font-family;
+}
+
+body {
+  color: $primary-color;
+  animation: fadeInAnimation ease 1500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.flex-header {
+  @include flex-container(column, center, center);
+  background: $bg-gradient;
+  overflow-y: hidden;
+  width: 100vw;
+  height: 800px;
+  position: relative;
+
+  .top-nav {
+    @include flex-container(row, space-evenly, center);
+    height: 10vh;
+    position: absolute;
+    top: 0;
+    .nav-bar {
+      @include flex-container(row, space-between, center);
+      width: 40vw;
+      list-style: circle;
+    }
+  }
+
+  .main-header {
+    @include flex-container(column, center, center);
+    gap: 20px;
+    h1 {
+      @include logo(5rem);
+    }
+    h4 {
+      @include upper-text(1.125rem);
+      font-weight: 400;
+    }
+  }
+
+  .side-elips {
+    @include flex-container(column, center, center);
+    gap: 50px;
+    position: fixed;
+    right: 52px;
+  }
+
+  .bottom-arrow {
+    position: absolute;
+    bottom: 52px;
+  }
+
+  .bg-header-img {
+    position: absolute;
+    top: 0;
+    opacity: 0.06;
+    height: 100vh;
+    zoom: 1.25;
+  }
+
+  .socialMedia-nav {
+    svg {
+      margin: 1rem;
+    }
+  }
+}
+
+.list-active {
+  list-style-type: disc;
+}
+
+#whatWeDo {
+  margin-top: 100px;
+  .header-what-we-do {
+    @include flex-container(column, center, center);
+    h2 {
+      @include upper-text(2.75rem);
+      margin-top: 24px;
+      color: $dark-color;
+    }
+  }
+}
