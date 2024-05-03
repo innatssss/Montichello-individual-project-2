@@ -102,6 +102,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 140px;
 }
 #whatWeDo .header-what-we-do h2 {
   text-transform: uppercase;
@@ -109,4 +110,79 @@ body {
   font-size: 2.75rem;
   margin-top: 24px;
   color: #2c4058;
+}
+#whatWeDo .projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 140px;
+}
+#whatWeDo .projects .project-1,
+#whatWeDo .projects .project-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 70px;
+  font-family: "Montserrat";
+}
+#whatWeDo .projects .project-1 .rightArticle,
+#whatWeDo .projects .project-1 .leftArticle,
+#whatWeDo .projects .project-2 .rightArticle,
+#whatWeDo .projects .project-2 .leftArticle {
+  color: #2c4058;
+  width: 30vw;
+}
+#whatWeDo .projects .project-1 .rightArticle h3,
+#whatWeDo .projects .project-1 .leftArticle h3,
+#whatWeDo .projects .project-2 .rightArticle h3,
+#whatWeDo .projects .project-2 .leftArticle h3 {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 1.375rem;
+  font-weight: 400;
+}
+#whatWeDo .projects .project-1 .rightArticle h2,
+#whatWeDo .projects .project-1 .leftArticle h2,
+#whatWeDo .projects .project-2 .rightArticle h2,
+#whatWeDo .projects .project-2 .leftArticle h2 {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 2.75rem;
+}
+#whatWeDo .projects .project-1 .rightArticle p,
+#whatWeDo .projects .project-1 .leftArticle p,
+#whatWeDo .projects .project-2 .rightArticle p,
+#whatWeDo .projects .project-2 .leftArticle p {
+  margin-top: 20px;
+  font-size: 1.125rem;
+}
+#whatWeDo .projects .project-1 .rightArticle button,
+#whatWeDo .projects .project-1 .leftArticle button,
+#whatWeDo .projects .project-2 .rightArticle button,
+#whatWeDo .projects .project-2 .leftArticle button {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 0.875rem;
+  font-weight: 400;
+  background: none;
+  border: 1px solid #2c4058;
+  color: #000000;
+  width: 190px;
+  height: 50px;
+  margin: 42px 0px;
+}
+#whatWeDo .projects .project-1 .rightArticle address a,
+#whatWeDo .projects .project-1 .leftArticle address a,
+#whatWeDo .projects .project-2 .rightArticle address a,
+#whatWeDo .projects .project-2 .leftArticle address a {
+  text-decoration: none;
+  color: #2c4058;
+}
+#whatWeDo .projects .project-1 .rightArticle address a:hover,
+#whatWeDo .projects .project-1 .leftArticle address a:hover,
+#whatWeDo .projects .project-2 .rightArticle address a:hover,
+#whatWeDo .projects .project-2 .leftArticle address a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
