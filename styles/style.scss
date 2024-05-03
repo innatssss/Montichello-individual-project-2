@@ -107,6 +107,7 @@ body {
     url(../assets/images/bg-header.jpeg) no-repeat top center/cover;
 }
 
+// second page
 #whatWeDo {
   margin-top: 100px;
   .header-what-we-do {
@@ -122,6 +123,7 @@ body {
   .projects {
     @include flex-container(column, center, center);
     gap: 140px;
+    margin-bottom: 140px;
     .project-1,
     .project-2 {
       @include flex-container(row, start, center);
@@ -160,10 +162,32 @@ body {
           }
         }
       }
+    }
+  }
+}
 
-      //   .leftArticle {
-      //     margin-left: 215px;
-      //   }
+// third page
+
+// style for background news section
+.bg-gradient-news {
+  background: linear-gradient(
+      243.43deg,
+      rgba(36, 204, 250, 0.9) 16.9%,
+      rgba(60, 127, 212, 0.9) 83.27%
+    ),
+    url(../assets/images/bg-news.png) no-repeat top center/cover;
+}
+
+#latestNews {
+  height: 1035px;
+  padding-top: 100px;
+  .header-latest-news {
+    @include flex-container(column, center, center);
+    margin-bottom: 140px;
+    h2 {
+      @include upper-text(2.75rem);
+      margin-top: 24px;
+      color: $dark-color;
     }
   }
 }

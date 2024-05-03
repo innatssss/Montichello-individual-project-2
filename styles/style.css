@@ -117,6 +117,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 140px;
+  margin-bottom: 140px;
 }
 #whatWeDo .projects .project-1,
 #whatWeDo .projects .project-2 {
@@ -185,4 +186,27 @@ body {
 #whatWeDo .projects .project-2 .rightArticle address a:hover,
 #whatWeDo .projects .project-2 .leftArticle address a:hover {
   text-decoration: underline;
+}
+
+.bg-gradient-news {
+  background: linear-gradient(243.43deg, rgba(36, 204, 250, 0.9) 16.9%, rgba(60, 127, 212, 0.9) 83.27%), url(../assets/images/bg-news.png) no-repeat top center/cover;
+}
+
+#latestNews {
+  height: 1035px;
+  padding-top: 100px;
+}
+#latestNews .header-latest-news {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 140px;
+}
+#latestNews .header-latest-news h2 {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 2.75rem;
+  margin-top: 24px;
+  color: #2c4058;
 }/*# sourceMappingURL=style.css.map */
