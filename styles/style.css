@@ -26,9 +26,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(243.43deg, #7e5aff 16.9%, #55b7ff 83.27%);
-  overflow-y: hidden;
-  width: 100vw;
+  background-size: cover;
   height: 800px;
   position: relative;
 }
@@ -40,13 +38,14 @@ body {
   height: 10vh;
   position: absolute;
   top: 0;
+  width: 100%;
 }
 .flex-header .top-nav .nav-bar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 40vw;
+  width: 30vw;
   list-style: circle;
 }
 .flex-header .main-header {
@@ -55,6 +54,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  width: 100%;
 }
 .flex-header .main-header h1 {
   color: #ffffff;
@@ -82,19 +82,16 @@ body {
   position: absolute;
   bottom: 52px;
 }
-.flex-header .bg-header-img {
-  position: absolute;
-  top: 0;
-  opacity: 0.06;
-  height: 100vh;
-  zoom: 1.25;
-}
 .flex-header .socialMedia-nav svg {
   margin: 1rem;
 }
 
 .list-active {
   list-style-type: disc;
+}
+
+.bg-gradient {
+  background: linear-gradient(243.43deg, rgba(126, 90, 255, 0.9) 16.9%, rgba(85, 183, 255, 0.9) 83.27%), url(../assets/images/bg-header.jpeg) no-repeat top center/cover;
 }
 
 #whatWeDo {

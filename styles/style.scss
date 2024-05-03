@@ -32,9 +32,7 @@ body {
 
 .flex-header {
   @include flex-container(column, center, center);
-  background: $bg-gradient;
-  overflow-y: hidden;
-  width: 100vw;
+  background-size: cover;
   height: 800px;
   position: relative;
 
@@ -43,9 +41,11 @@ body {
     height: 10vh;
     position: absolute;
     top: 0;
+    width: 100%;
+
     .nav-bar {
       @include flex-container(row, space-between, center);
-      width: 40vw;
+      width: 30vw;
       list-style: circle;
     }
   }
@@ -53,6 +53,8 @@ body {
   .main-header {
     @include flex-container(column, center, center);
     gap: 20px;
+    width: 100%;
+
     h1 {
       @include logo(5rem);
     }
@@ -74,14 +76,6 @@ body {
     bottom: 52px;
   }
 
-  .bg-header-img {
-    position: absolute;
-    top: 0;
-    opacity: 0.06;
-    height: 100vh;
-    zoom: 1.25;
-  }
-
   .socialMedia-nav {
     svg {
       margin: 1rem;
@@ -91,6 +85,16 @@ body {
 
 .list-active {
   list-style-type: disc;
+}
+
+// style for background header
+.bg-gradient {
+  background: linear-gradient(
+      243.43deg,
+      rgba(126, 90, 255, 0.9) 16.9%,
+      rgba(85, 183, 255, 0.9) 83.27%
+    ),
+    url(../assets/images/bg-header.jpeg) no-repeat top center/cover;
 }
 
 #whatWeDo {
