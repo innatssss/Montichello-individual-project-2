@@ -181,6 +181,11 @@ body {
 #latestNews {
   height: 1035px;
   padding-top: 100px;
+  position: relative;
+  .svg-bg {
+    position: absolute;
+    bottom: 0;
+  }
   .header-latest-news {
     @include flex-container(column, center, center);
     margin-bottom: 140px;
@@ -189,5 +194,53 @@ body {
       margin-top: 24px;
       color: $dark-color;
     }
+  }
+
+  .slide-news {
+    @include flex-container(row, space-evenly, center);
+    margin: 0px 115px;
+    .card {
+      width: 370px;
+      height: 514px;
+      background-color: $primary-color;
+      color: $dark-color;
+      .img-container {
+        width: inherit;
+        height: 240px;
+        img {
+          object-fit: cover;
+        }
+      }
+      .info-news {
+        margin: 20px;
+        p {
+          margin: 20px 0px;
+        }
+        .author {
+          @include flex-container(row, start, center);
+          gap: 20px;
+          img {
+            border-radius: 50%;
+          }
+          .author-name {
+            @include flex-container(column, start, start);
+            gap: 6px;
+            h4 {
+              @include upper-text(1.125rem);
+              font-weight: 400;
+            }
+            span {
+              color: rgba(85, 183, 255, 1);
+              font-size: 0.875rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .slide-dots {
+    @include flex-container(row, center, center);
+    gap: 50px;
+    margin-top: 60px;
   }
 }
