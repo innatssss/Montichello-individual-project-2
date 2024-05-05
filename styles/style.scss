@@ -77,8 +77,8 @@ body {
   .side-elips {
     @include flex-container(column, center, center);
     gap: 50px;
-    position: fixed;
-    right: 52px;
+    position: absolute;
+    right: 54px;
   }
 
   .bottom-arrow {
@@ -298,7 +298,34 @@ body {
     }
   }
   button {
-    margin-top: 50px;
+    margin: 50px 0px;
     @include main-btn();
+  }
+}
+
+.bg-gradient-footer {
+  background: linear-gradient(
+      251.06deg,
+      rgba(126, 90, 255, 0.9),
+      rgba(85, 183, 255, 0.9)
+    ),
+    url("../assets/svg/bg-footer.svg") no-repeat top center/cover;
+}
+
+#footer {
+  @include flex-container(row, center, space-between);
+  gap: 369px;
+  height: 549px;
+  .credit {
+    align-self: center;
+    p {
+      margin-top: 42px;
+    }
+  }
+  .socialMedia {
+    align-self: center;
+    svg {
+      margin: 1rem;
+    }
   }
 }
