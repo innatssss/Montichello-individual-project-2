@@ -345,7 +345,7 @@ body {
 }
 
 .bg-gradient-footer {
-  background: linear-gradient(251.06deg, rgba(126, 90, 255, 0.9), rgba(85, 183, 255, 0.9)), url("../assets/svg/bg-footer.svg") no-repeat top center/cover;
+  background: linear-gradient(251.06deg, rgba(126, 90, 255, 0.9), rgba(85, 183, 255, 0.9)), url("../assets/svg/bg-footer.svg") no-repeat bottom center/cover;
 }
 
 #footer {
