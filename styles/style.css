@@ -348,6 +348,111 @@ body {
   background: linear-gradient(251.06deg, rgba(126, 90, 255, 0.9), rgba(85, 183, 255, 0.9)), url("../assets/svg/bg-footer.svg") no-repeat bottom center/cover;
 }
 
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#contact .contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("../assets/svg/bg-contact-form.svg") no-repeat bottom center;
+  background-color: #ffffff;
+  position: relative;
+  top: 175px;
+  width: 100%;
+  height: 450px;
+}
+#contact .contact-form .header-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 140px;
+}
+#contact .contact-form .header-contact h2 {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 2.75rem;
+  margin-top: 24px;
+  color: #2c4058;
+}
+#contact .contact-form .contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  gap: 50px;
+}
+#contact .contact-form .contact-container .form-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+}
+#contact .contact-form .contact-container .form-left i {
+  margin-right: 1rem;
+}
+#contact .contact-form .contact-container .form-left a {
+  text-decoration: none;
+  color: #2c4058;
+}
+#contact .contact-form .contact-container .form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+#contact .contact-form .contact-container .form-box input {
+  width: 310px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #4b5562;
+  height: 4rem;
+  padding: 1rem 1rem 0.5rem 0.5rem;
+  font-size: 1.125rem;
+}
+#contact .contact-form .contact-container .form-box input :hover {
+  border-bottom: 1px solid #000000;
+}
+#contact .contact-form .contact-container .form-box input[text] {
+  font-family: "Montserrat";
+  color: #4b5562;
+}
+#contact .contact-form .contact-container .form-box input[text]:hover {
+  color: #000000;
+}
+#contact .contact-form .contact-container .form-box .submit {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 0.875rem;
+  font-weight: 400;
+  background: none;
+  border: 1px solid #2c4058;
+  color: #000000;
+  width: 190px;
+  height: 50px;
+  align-self: flex-end;
+  margin-top: 30px;
+}
+#contact .purple-svg {
+  color: #7e5bff;
+}
+#contact .contact-style {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 1.125rem;
+  text-transform: none;
+  color: #2c4058;
+  font-style: normal;
+}
+
 #footer {
   display: flex;
   flex-direction: row;
