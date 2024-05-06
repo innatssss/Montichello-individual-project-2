@@ -79,8 +79,27 @@ body {
   right: 54px;
 }
 .flex-header .bottom-arrow {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 0.875rem;
+  font-weight: 400;
+  background: none;
+  border: 1px solid #2c4058;
+  color: #000000;
+  width: 190px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
   position: absolute;
   bottom: 52px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: 1000ms;
+}
+.flex-header .bottom-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-20px);
 }
 .flex-header .socialMedia-nav svg {
   margin: 1rem;
@@ -172,7 +191,16 @@ body {
   color: #000000;
   width: 190px;
   height: 50px;
+  cursor: pointer;
   margin: 42px 0px;
+}
+#whatWeDo .projects .project-1 .rightArticle button:hover,
+#whatWeDo .projects .project-1 .leftArticle button:hover,
+#whatWeDo .projects .project-2 .rightArticle button:hover,
+#whatWeDo .projects .project-2 .leftArticle button:hover {
+  transition: 1000ms;
+  background-color: #7e5bff;
+  color: #ffffff;
 }
 #whatWeDo .projects .project-1 .rightArticle address a,
 #whatWeDo .projects .project-1 .leftArticle address a,
@@ -213,7 +241,7 @@ body {
   font-family: "Montserrat";
   font-size: 2.75rem;
   margin-top: 24px;
-  color: #2c4058;
+  color: #ffffff;
 }
 #latestNews .slide-news {
   display: flex;
@@ -221,6 +249,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   margin: 0px 115px;
+  gap: 2rem;
 }
 #latestNews .slide-news .card {
   width: 370px;
@@ -276,6 +305,21 @@ body {
   align-items: center;
   gap: 50px;
   margin-top: 60px;
+}
+#latestNews .right-arrow,
+#latestNews .left-arrow {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 0.875rem;
+  font-weight: 400;
+  background: none;
+  border: 1px solid #2c4058;
+  color: #000000;
+  width: 190px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
 }
 
 #gallery {
@@ -342,6 +386,12 @@ body {
   color: #000000;
   width: 190px;
   height: 50px;
+  cursor: pointer;
+  transition: 1000ms;
+}
+#gallery button:hover {
+  background-color: #7e5bff;
+  color: #ffffff;
 }
 
 .bg-gradient-footer {
@@ -362,17 +412,19 @@ body {
   align-items: center;
   background: url("../assets/svg/bg-contact-form.svg") no-repeat bottom center;
   background-color: #ffffff;
-  position: relative;
-  top: 175px;
-  width: 100%;
+  width: 770px;
   height: 450px;
+  box-shadow: 0px -4px 30px 0px rgba(133, 133, 133, 0.2);
 }
 #contact .contact-form .header-contact {
+  margin: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 140px;
+}
+#contact .contact-form .header-contact .arrow {
+  margin-top: 50px;
 }
 #contact .contact-form .header-contact h2 {
   text-transform: uppercase;
@@ -438,8 +490,14 @@ body {
   color: #000000;
   width: 190px;
   height: 50px;
+  cursor: pointer;
   align-self: flex-end;
   margin-top: 30px;
+  transition: 1000ms;
+}
+#contact .contact-form .contact-container .form-box .submit:hover {
+  background-color: #7e5bff;
+  color: #ffffff;
 }
 #contact .purple-svg {
   color: #7e5bff;
