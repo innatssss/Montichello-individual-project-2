@@ -248,7 +248,7 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  margin: 0px 115px;
+  margin: 0px 105px;
   gap: 2rem;
 }
 #latestNews .slide-news .card {
@@ -306,7 +306,21 @@ body {
   gap: 50px;
   margin-top: 60px;
 }
-#latestNews .right-arrow,
+#latestNews .right-arrow {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 0.875rem;
+  font-weight: 400;
+  background: none;
+  border: 1px solid #2c4058;
+  color: #000000;
+  width: 190px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
 #latestNews .left-arrow {
   text-transform: uppercase;
   font-family: "Montserrat";
@@ -405,6 +419,11 @@ body {
   align-items: center;
   position: relative;
 }
+#contact #map {
+  width: 100vw;
+  height: 700px;
+  filter: grayscale(100%);
+}
 #contact .contact-form {
   display: flex;
   flex-direction: column;
@@ -415,6 +434,8 @@ body {
   width: 770px;
   height: 450px;
   box-shadow: 0px -4px 30px 0px rgba(133, 133, 133, 0.2);
+  margin-top: -350px;
+  z-index: 99;
 }
 #contact .contact-form .header-contact {
   margin: 50px;
@@ -518,6 +539,8 @@ body {
   align-items: space-between;
   gap: 369px;
   height: 549px;
+  z-index: -1;
+  margin-top: -150px;
 }
 #footer .credit {
   align-self: center;

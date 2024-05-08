@@ -13,6 +13,10 @@
       content="TThis is webside of Montichello, personal Java script project 2"
     />
 
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_NeKK_tKhmbuMZvnVsW-fsJoTmHqY50g&callback=console.debug&libraries=maps,marker&v=beta"
+    ></script>
     <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
     <!-- Icons -->
     <link
@@ -30,7 +34,6 @@
     />
     <!-- Android Chrome -->
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
-
     <link rel="stylesheet" href="./styles/style.css" />
     <link
       rel="stylesheet"
@@ -39,7 +42,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_NeKK_tKhmbuMZvnVsW-fsJoTmHqY50g&loading=async&callback=initMap&libraries=places"
+    ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./script.js" defer></script>
   </head>
@@ -349,7 +355,7 @@
               </div>
             </div>
           </div>
-          <button class="arrow right-arrow">
+          <button class="right-arrow">
             <svg
               width="40"
               height="40"
@@ -409,7 +415,7 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle cx="4.5" cy="4.5" r="4" stroke="white" />
+            <circle cx="4.5" cy="4  .5" r="4" stroke="white" />
           </svg>
         </div>
         <div class="svg-bg">
@@ -541,4 +547,5 @@
       </div>
     </footer>
   </main>
+  <script src="./script.js" defer></script>
 </html>
