@@ -1,44 +1,4 @@
-// let scrollContainer = document.querySelector(".slide-news");
-// let backBtn = document.querySelector(".left-arrow");
-// let nextBtn = document.querySelector(".right-arrow");
-
-// scrollContainer.addEventListener("wheel", (evt) => {
-//   evt.preventDefault();
-//   scrollContainer.scrollLeft += evt.deltaY;
-// });
-
-// nextBtn.addEventListener("click", () => {
-//   scrollContainer.style.scrollBehavior = "smooth";
-//   scrollContainer.scrollLeft += 370;
-// });
-
-// backBtn.addEventListener("click", () => {
-//   scrollContainer.stale.scrollBehavior = "smooth";
-//   scrollContainer.scrollLeft -= 370;
-// });
-
-// Get the container and button elements
-// const container = document.querySelector(".slide-news");
-// const leftButton = document.querySelector(".left-arrow");
-// const rightButton = document.querySelector(".right-arrow");
-
-// // Define the scroll distance for each click
-// const scrollDistance = 300; // Adjust this value as needed
-
-// // Function to scroll left
-// function scrollLeft() {
-//   container.scrollLeft -= scrollDistance;
-// }
-
-// // Function to scroll right
-// function scrollRight() {
-//   container.scrollLeft += scrollDistance;
-// }
-
-// // Add click event listeners to the buttons
-// leftButton.addEventListener("click", scrollLeft);
-// rightButton.addEventListener("click", scrollRight);
-
+// map
 let marker;
 
 $(document).ready(function () {
@@ -68,4 +28,19 @@ $(document).ready(function () {
   }
 
   window.initMap = initMap;
+});
+
+// slick slider
+
+$(() => {
+  var slider = $(".slide-news");
+  
+  slider.slick({
+    dots: true,
+    arrows: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+  });
 });

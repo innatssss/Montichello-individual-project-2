@@ -228,6 +228,11 @@ body {
 #latestNews .svg-bg {
   position: absolute;
   bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+#latestNews .svg-bg img {
+  width: 100%;
 }
 #latestNews .header-latest-news {
   display: flex;
@@ -246,27 +251,29 @@ body {
 #latestNews .slide-news {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   margin: 0px 105px;
   gap: 2rem;
+  align-items: center;
 }
 #latestNews .slide-news .card {
   width: 370px;
   height: 514px;
   background-color: #ffffff;
   color: #2c4058;
+  margin-right: 30px;
 }
 #latestNews .slide-news .card .img-container {
-  width: inherit;
+  width: 100%;
   height: 240px;
 }
 #latestNews .slide-news .card .img-container img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 100%;
 }
 #latestNews .slide-news .card .info-news {
   margin: 20px;
+  margin-top: 80px;
 }
 #latestNews .slide-news .card .info-news p {
   margin: 20px 0px;
@@ -297,43 +304,6 @@ body {
 #latestNews .slide-news .card .info-news .author .author-name span {
   color: rgb(85, 183, 255);
   font-size: 0.875rem;
-}
-#latestNews .slide-dots {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  margin-top: 60px;
-}
-#latestNews .right-arrow {
-  text-transform: uppercase;
-  font-family: "Montserrat";
-  font-size: 0.875rem;
-  font-weight: 400;
-  background: none;
-  border: 1px solid #2c4058;
-  color: #000000;
-  width: 190px;
-  height: 50px;
-  cursor: pointer;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-}
-#latestNews .left-arrow {
-  text-transform: uppercase;
-  font-family: "Montserrat";
-  font-size: 0.875rem;
-  font-weight: 400;
-  background: none;
-  border: 1px solid #2c4058;
-  color: #000000;
-  width: 190px;
-  height: 50px;
-  cursor: pointer;
-  border: none;
-  border-radius: 50%;
 }
 
 #gallery {
@@ -420,7 +390,7 @@ body {
   position: relative;
 }
 #contact #map {
-  width: 100vw;
+  width: 100%;
   height: 700px;
   filter: grayscale(100%);
 }
