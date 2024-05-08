@@ -255,14 +255,12 @@ body {
   align-items: center;
   margin: 0px 105px;
   gap: 2rem;
-  align-items: center;
 }
 #latestNews .slide-news .card {
   width: 370px;
   height: 514px;
   background-color: #ffffff;
   color: #2c4058;
-  margin-right: 30px;
 }
 #latestNews .slide-news .card .img-container {
   width: 100%;
@@ -273,7 +271,6 @@ body {
 }
 #latestNews .slide-news .card .info-news {
   margin: 20px;
-  margin-top: 80px;
 }
 #latestNews .slide-news .card .info-news p {
   margin: 20px 0px;

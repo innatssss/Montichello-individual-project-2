@@ -31,16 +31,26 @@ $(document).ready(function () {
 });
 
 // slick slider
+// $(() => {
+//   var slider = $(".slide-news");
+//   slider.slick({
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     autoplay: true,
+//     autoplaySpeed: 4000,
+//     accessibility: true,
+//     draggable: true,
+//   });
+// });
 
-$(() => {
-  var slider = $(".slide-news");
-  
-  slider.slick({
-    dots: true,
+$(document).ready(function () {
+  $(".slide-news").slick({
     arrows: true,
+    dots: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
+    draggable: true,
   });
 });
