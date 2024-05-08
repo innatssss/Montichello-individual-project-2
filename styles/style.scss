@@ -223,40 +223,42 @@ body {
     @include flex-container(row, center, center);
     margin: 0px 105px;
     gap: 2rem;
-
-    .card {
-      width: 370px;
-      height: 514px;
-      background-color: $primary-color;
-      color: $dark-color;
-      .img-container {
-        width: 100%;
-        height: 240px;
-        img {
+    li {
+      list-style: none;
+      .card {
+        width: 370px;
+        height: 514px;
+        background-color: $primary-color;
+        color: $dark-color;
+        .img-container {
           width: 100%;
-        }
-      }
-      .info-news {
-        margin: 20px;
-        p {
-          margin: 20px 0px;
-        }
-        .author {
-          @include flex-container(row, start, center);
-          gap: 20px;
+          height: 240px;
           img {
-            border-radius: 50%;
+            width: 100%;
           }
-          .author-name {
-            @include flex-container(column, start, start);
-            gap: 6px;
-            h4 {
-              @include upper-text(1.125rem);
-              font-weight: 400;
+        }
+        .info-news {
+          margin: 20px;
+          p {
+            margin: 20px 0px;
+          }
+          .author {
+            @include flex-container(row, start, center);
+            gap: 20px;
+            img {
+              border-radius: 50%;
             }
-            span {
-              color: rgba(85, 183, 255, 1);
-              font-size: 0.875rem;
+            .author-name {
+              @include flex-container(column, start, start);
+              gap: 6px;
+              h4 {
+                @include upper-text(1.125rem);
+                font-weight: 400;
+              }
+              span {
+                color: rgba(85, 183, 255, 1);
+                font-size: 0.875rem;
+              }
             }
           }
         }
