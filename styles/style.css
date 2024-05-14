@@ -249,12 +249,7 @@ body {
   color: #ffffff;
 }
 #latestNews .slide-news {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   margin: 0px 105px;
-  gap: 2rem;
 }
 #latestNews .slide-news li {
   list-style: none;

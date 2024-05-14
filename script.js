@@ -29,3 +29,18 @@ $(document).ready(function () {
 
   window.initMap = initMap;
 });
+
+// slick slider news
+
+$(() => {
+  var slider = $(".slider");
+
+  slider.slick({
+    dots: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrow: true,
+  });
+});
