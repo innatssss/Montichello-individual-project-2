@@ -23,6 +23,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: $main-font-family;
+  transition: all 0.2s linear;
 }
 
 body {
@@ -30,6 +31,14 @@ body {
   animation: fadeInAnimation ease 1500ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 @keyframes fadeInAnimation {
@@ -59,6 +68,89 @@ body {
       width: 30vw;
       list-style: circle;
     }
+  }
+
+  //side navbar
+  .navbar {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    z-index: 1000;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        width: 200px;
+        position: relative;
+        text-align: right;
+
+        span {
+          display: inline-block;
+          background: $dark-color;
+          color: $primary-color;
+          letter-spacing: 1px;
+          padding: 10px 25px;
+          margin-right: 30px;
+          border-radius: 3px;
+          transform: translateX(30px);
+          opacity: 0;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(7px, -50%);
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  li:hover .dot span {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  .navbar ul li .dot::before,
+  .navbar ul li .dot::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    display: block;
+    transition: 0.2s ease-out;
+  }
+
+  .navbar ul li .dot::before {
+    height: 5px;
+    width: 5px;
+    border: 2px solid #333;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  .navbar ul li .dot.active::before,
+  .navbar ul li:hover .dot::before {
+    border-color: #333;
+    background: #333;
+  }
+
+  .navbar ul li .dot::after {
+    height: 15px;
+    width: 15px;
+    border: 2px solid #333;
+    right: -5px;
+    transform: translateY(-50%) scale(0);
+  }
+
+  .navbar ul li .dot.active::after,
+  .navbar ul li:hover .dot::after {
+    transform: translateY(-50%) scale(1);
   }
 
   .main-header {
@@ -197,7 +289,7 @@ body {
 
 #latestNews {
   height: 1035px;
-  padding-top: 100px;
+  padding-top: 60px;
   position: relative;
   .svg-bg {
     position: absolute;
@@ -216,7 +308,7 @@ body {
 
     h2 {
       @include upper-text(2.75rem);
-      margin-top: 24px;
+      // margin-top: 24px;
       color: $primary-color;
     }
   }
@@ -267,6 +359,7 @@ body {
   }
   .slick-prev {
     translate: -50px;
+
     &:before {
       font-size: 4rem;
       color: transparent;
@@ -274,6 +367,8 @@ body {
     }
   }
   .slick-next {
+    padding-right: 80px;
+
     &:before {
       color: transparent;
       font-size: 4rem;
@@ -294,10 +389,10 @@ body {
 
 #gallery {
   @include flex-container(column, center, center);
-  margin-top: 140px;
+  padding-top: 120px;
   .header-gallery {
     @include flex-container(column, center, center);
-    margin-bottom: 140px;
+    margin-bottom: 100px;
     h2 {
       @include upper-text(2.75rem);
       margin-top: 24px;

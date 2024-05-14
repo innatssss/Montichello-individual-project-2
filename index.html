@@ -59,7 +59,7 @@
     <script src="script.js" defer></script>
   </head>
   <main>
-    <header class="flex-header bg-gradient">
+    <header id="home" class="flex-header bg-gradient sec">
       <div class="top-nav">
         <div class="logo-nav">
           <svg
@@ -142,6 +142,40 @@
           </svg>
         </nav>
       </div>
+      <nav class="side-nav navbar">
+        <ul>
+          <li class="bar"></li>
+          <li>
+            <a href="#home" class="dot active" data-scroll="home">
+              <span>Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#whatWeDo" class="dot" data-scroll="whatWeDo">
+              <span>Projects</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#latestNews" class="dot" data-scroll="latestNews">
+              <span>News</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#gallery" class="dot" data-scroll="gallery">
+              <span>Gallery</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#contact" class="dot" data-scroll="contact">
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
       <div class="main-header">
         <h1>Simple &amp; modern</h1>
         <h4>We make the world beautiful everyday</h4>
@@ -164,7 +198,7 @@
       </button> -->
     </header>
     <body>
-      <section id="whatWeDo">
+      <section id="whatWeDo" class="section sec">
         <div class="header-what-we-do">
           <div>
             <svg
@@ -230,7 +264,7 @@
           </div>
         </div>
       </section>
-      <section id="latestNews" class="bg-gradient-news">
+      <section id="latestNews" class="bg-gradient-news section sec">
         <div class="header-latest-news">
           <div>
             <svg
@@ -334,7 +368,7 @@
           <img src="./assets/svg/bg-news.svg" alt="" />
         </div>
       </section>
-      <section id="gallery">
+      <section id="gallery" class="section sec">
         <div class="header-gallery">
           <div class="arrow">
             <svg
@@ -358,7 +392,7 @@
         </div>
         <button>See more</button>
       </section>
-      <section id="contact">
+      <section id="contact" class="section sec">
         <div id="map"></div>
         <div class="contact-form">
           <div class="header-contact">

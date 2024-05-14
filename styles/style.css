@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat";
+  transition: all 0.2s linear;
 }
 
 body {
@@ -11,6 +12,14 @@ body {
   animation: fadeInAnimation ease 1500ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 @keyframes fadeInAnimation {
@@ -47,6 +56,80 @@ body {
   align-items: center;
   width: 30vw;
   list-style: circle;
+}
+.flex-header .navbar {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+.flex-header .navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.flex-header .navbar ul li {
+  width: 200px;
+  position: relative;
+  text-align: right;
+}
+.flex-header .navbar ul li span {
+  display: inline-block;
+  background: #2c4058;
+  color: #ffffff;
+  letter-spacing: 1px;
+  padding: 10px 25px;
+  margin-right: 30px;
+  border-radius: 3px;
+  transform: translateX(30px);
+  opacity: 0;
+}
+.flex-header .navbar ul li span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(7px, -50%);
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  display: block;
+}
+.flex-header li:hover .dot span {
+  transform: translateX(0px);
+  opacity: 1;
+}
+.flex-header .navbar ul li .dot::before,
+.flex-header .navbar ul li .dot::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  display: block;
+  transition: 0.2s ease-out;
+}
+.flex-header .navbar ul li .dot::before {
+  height: 5px;
+  width: 5px;
+  border: 2px solid #333;
+  right: 0;
+  transform: translateY(-50%);
+}
+.flex-header .navbar ul li .dot.active::before,
+.flex-header .navbar ul li:hover .dot::before {
+  border-color: #333;
+  background: #333;
+}
+.flex-header .navbar ul li .dot::after {
+  height: 15px;
+  width: 15px;
+  border: 2px solid #333;
+  right: -5px;
+  transform: translateY(-50%) scale(0);
+}
+.flex-header .navbar ul li .dot.active::after,
+.flex-header .navbar ul li:hover .dot::after {
+  transform: translateY(-50%) scale(1);
 }
 .flex-header .main-header {
   display: flex;
@@ -222,7 +305,7 @@ body {
 
 #latestNews {
   height: 1035px;
-  padding-top: 100px;
+  padding-top: 60px;
   position: relative;
 }
 #latestNews .svg-bg {
@@ -246,7 +329,6 @@ body {
   text-transform: uppercase;
   font-family: "Montserrat";
   font-size: 2.75rem;
-  margin-top: 24px;
   color: #ffffff;
 }
 #latestNews .slide-news {
@@ -312,6 +394,9 @@ body {
   color: transparent;
   background: url(../assets/svg/Left.svg) no-repeat;
 }
+#latestNews .slick-next {
+  padding-right: 80px;
+}
 #latestNews .slick-next:before {
   color: transparent;
   font-size: 4rem;
@@ -331,14 +416,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 140px;
+  padding-top: 120px;
 }
 #gallery .header-gallery {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 140px;
+  margin-bottom: 100px;
 }
 #gallery .header-gallery h2 {
   text-transform: uppercase;
