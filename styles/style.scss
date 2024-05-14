@@ -204,6 +204,7 @@ body {
     bottom: 0;
     margin: 0;
     padding: 0;
+    z-index: -1;
     img {
       width: 100%;
     }
@@ -220,50 +221,74 @@ body {
     }
   }
   .slide-news {
-    // @include flex-container(row, center, center);
+    @include flex-container(row, center, center);
     margin: 0px 105px;
-    // gap: 2rem;
-    li {
-      list-style: none;
-      .card {
-        width: 370px;
-        height: 514px;
-        background-color: $primary-color;
-        color: $dark-color;
-        .img-container {
+    gap: 1rem;
+
+    .card {
+      margin-left: 2rem;
+      width: 370px;
+      height: 514px;
+      background-color: $primary-color;
+      color: $dark-color;
+      .img-container {
+        width: 100%;
+        height: 240px;
+        img {
           width: 100%;
-          height: 240px;
-          img {
-            width: 100%;
-          }
         }
-        .info-news {
-          margin: 20px;
-          p {
-            margin: 20px 0px;
+      }
+      .info-news {
+        margin: 20px;
+        p {
+          margin: 20px 0px;
+        }
+        .author {
+          @include flex-container(row, start, center);
+          gap: 20px;
+          img {
+            border-radius: 50%;
           }
-          .author {
-            @include flex-container(row, start, center);
-            gap: 20px;
-            img {
-              border-radius: 50%;
+          .author-name {
+            @include flex-container(column, start, start);
+            gap: 6px;
+            h4 {
+              @include upper-text(1.125rem);
+              font-weight: 400;
             }
-            .author-name {
-              @include flex-container(column, start, start);
-              gap: 6px;
-              h4 {
-                @include upper-text(1.125rem);
-                font-weight: 400;
-              }
-              span {
-                color: rgba(85, 183, 255, 1);
-                font-size: 0.875rem;
-              }
+            span {
+              color: rgba(85, 183, 255, 1);
+              font-size: 0.875rem;
             }
           }
         }
       }
     }
+  }
+  .slick-prev {
+    translate: -50px;
+    &:before {
+      font-size: 4rem;
+      color: transparent;
+      background: url(../assets/svg/Left.svg) no-repeat;
+    }
+  }
+  .slick-next {
+    &:before {
+      color: transparent;
+      font-size: 4rem;
+      background: url(../assets/svg/Right.svg) no-repeat;
+    }
+  }
+
+  .slick-dots li button:before {
+    margin-top: 50px;
+    font-size: 10px;
+  }
+
+  .slick-active button:before {
+    color: white;
+    opacity: 1;
   }
 }
 

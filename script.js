@@ -33,7 +33,7 @@ $(document).ready(function () {
 // slick slider news
 
 $(() => {
-  var slider = $(".slider");
+  var slider = $(".slide-news");
 
   slider.slick({
     dots: true,
@@ -41,6 +41,5 @@ $(() => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
-    arrow: true,
   });
 });
