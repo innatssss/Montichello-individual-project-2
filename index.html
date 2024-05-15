@@ -433,9 +433,20 @@
                 19:30PM
               </p>
             </div>
-            <form class="form-box">
+            <form
+              class="form-box"
+              onsubmit="return formValidation()"
+              name="form"
+            >
               <label class="lable-title" for="name"></label>
-              <input id="name" type="text" placeholder="Mollie Medina" />
+              <input
+                id="name"
+                name="username"
+                type="text"
+                placeholder="Mollie Medina"
+              />
+              <span id="userNameError" class="error-message"></span>
+
               <label class="lable-title" for="email"></label>
               <input
                 class="input-container"
@@ -444,6 +455,7 @@
                 id="email"
                 placeholder="Email"
               />
+              <span id="emailError" class="error-message"></span>
               <button type="submit" class="submit">Submit</button>
             </form>
           </div>

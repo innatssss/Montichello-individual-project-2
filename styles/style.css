@@ -591,6 +591,11 @@ html {
   background-color: #7e5bff;
   color: #ffffff;
 }
+#contact .contact-form .error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
 #contact .purple-svg {
   color: #7e5bff;
 }

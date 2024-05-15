@@ -80,3 +80,43 @@ function fadeIn() {
   }
 }
 fadeIn();
+
+// form validation
+function formValidation() {
+  let isValid = true;
+
+  // Reset error messages
+  $(".error-message").html("");
+
+  // validate email
+  const email = $("#email").val().trim();
+  if (email === "") {
+    $("#emailError").html("Email is required").css("color", "red");
+    isValid = false;
+  } else if (!isValidEmail(email)) {
+    $("#emailError")
+      .html("Please enter a valid email address")
+      .css("color", "red");
+    isValid = false;
+  }
+
+  // validate username
+  const username = $("#name").val().trim();
+  if (username === "") {
+    $("#userNameError").html("Username is required").css("color", "red");
+    isValid = false;
+  } else if (username.length < 2) {
+    $("#userNameError")
+      .html("Username should contain at least 2 characters")
+      .css("color", "red");
+    isValid = false;
+  }
+
+  return isValid;
+}
+
+// valedate patterns
+function isValidEmail(email) {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailPattern.test(email);
+}
