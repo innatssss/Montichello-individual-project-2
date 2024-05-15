@@ -493,7 +493,6 @@ html {
 #contact #map {
   width: 100%;
   height: 700px;
-  filter: grayscale(100%);
 }
 #contact .contact-form {
   display: flex;
