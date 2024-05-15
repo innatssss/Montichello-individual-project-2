@@ -74,8 +74,9 @@ function fadeIn() {
     var distInView = elem.getBoundingClientRect().top - window.innerHeight + 40;
     if (distInView < 0) {
       elem.classList.add("inView");
-    } else {
-      elem.classList.remove("inView");
+      // } else {
+      //   elem.classList.remove("inView");
+      // }
     }
   }
 }

@@ -472,7 +472,7 @@ html {
     width: 770px;
     height: 450px;
     box-shadow: 0px -4px 30px 0px #85858533;
-    margin-top: -350px;
+    margin-top: -380px;
     z-index: 99;
     .header-contact {
       margin: 50px;
@@ -563,6 +563,7 @@ html {
 
 #footer {
   @include flex-container(row, center, space-between);
+  position: relative;
   gap: 369px;
   height: 549px;
   z-index: -1;
