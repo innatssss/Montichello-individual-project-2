@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: "Montserrat";
   transition: all 0.2s linear;
+  scroll-snap-type: y mandatory;
 }
 
 body {
@@ -12,14 +13,25 @@ body {
   animation: fadeInAnimation ease 1500ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  overflow-x: hidden;
+.sec {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  opacity: 0;
+  transform: translateY(50px) rotate(-5deg) translateZ(0);
+  transition-delay: 0.3s;
+  transition: 0.4s;
+}
+
+.inView {
+  opacity: 1;
+  transform: translateY(0px) rotate(0deg) translateZ(0);
 }
 
 @keyframes fadeInAnimation {
@@ -36,8 +48,9 @@ body {
   justify-content: center;
   align-items: center;
   background-size: cover;
-  height: 800px;
+  height: 950px;
   position: relative;
+  margin-top: 0;
 }
 .flex-header .top-nav {
   display: flex;
@@ -56,80 +69,6 @@ body {
   align-items: center;
   width: 30vw;
   list-style: circle;
-}
-.flex-header .navbar {
-  position: fixed;
-  top: 50%;
-  right: 30px;
-  transform: translateY(-50%);
-  z-index: 1000;
-}
-.flex-header .navbar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.flex-header .navbar ul li {
-  width: 200px;
-  position: relative;
-  text-align: right;
-}
-.flex-header .navbar ul li span {
-  display: inline-block;
-  background: #2c4058;
-  color: #ffffff;
-  letter-spacing: 1px;
-  padding: 10px 25px;
-  margin-right: 30px;
-  border-radius: 3px;
-  transform: translateX(30px);
-  opacity: 0;
-}
-.flex-header .navbar ul li span::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(7px, -50%);
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  display: block;
-}
-.flex-header li:hover .dot span {
-  transform: translateX(0px);
-  opacity: 1;
-}
-.flex-header .navbar ul li .dot::before,
-.flex-header .navbar ul li .dot::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  border-radius: 50%;
-  display: block;
-  transition: 0.2s ease-out;
-}
-.flex-header .navbar ul li .dot::before {
-  height: 5px;
-  width: 5px;
-  border: 2px solid #333;
-  right: 0;
-  transform: translateY(-50%);
-}
-.flex-header .navbar ul li .dot.active::before,
-.flex-header .navbar ul li:hover .dot::before {
-  border-color: #333;
-  background: #333;
-}
-.flex-header .navbar ul li .dot::after {
-  height: 15px;
-  width: 15px;
-  border: 2px solid #333;
-  right: -5px;
-  transform: translateY(-50%) scale(0);
-}
-.flex-header .navbar ul li .dot.active::after,
-.flex-header .navbar ul li:hover .dot::after {
-  transform: translateY(-50%) scale(1);
 }
 .flex-header .main-header {
   display: flex;
@@ -151,15 +90,6 @@ body {
   font-family: "Montserrat";
   font-size: 1.125rem;
   font-weight: 400;
-}
-.flex-header .side-elips {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  position: absolute;
-  right: 54px;
 }
 .flex-header .bottom-arrow {
   text-transform: uppercase;
@@ -190,6 +120,72 @@ body {
 
 .list-active {
   list-style-type: disc;
+}
+
+.navbar {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navbar ul li {
+  width: 10px;
+  position: relative;
+  text-align: right;
+}
+.navbar ul li span {
+  display: inline-block;
+  background: #2c4058;
+  color: #ffffff;
+  letter-spacing: 1px;
+  padding: 10px 25px;
+  margin-right: 30px;
+  border-radius: 3px;
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+.navbar ul li .dot::before,
+.navbar ul li .dot::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  display: block;
+  transition: 0.2s ease-out;
+}
+
+.navbar ul li .dot::before {
+  height: 5px;
+  width: 5px;
+  border: 2px solid #333;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.navbar ul li .dot.active::before,
+.navbar ul li:hover .dot::before {
+  border-color: #333;
+  background: #333;
+}
+
+.navbar ul li .dot::after {
+  height: 15px;
+  width: 15px;
+  border: 2px solid #333;
+  right: -5px;
+  transform: translateY(-50%) scale(0);
+}
+
+.navbar ul li .dot.active::after,
+.navbar ul li:hover .dot::after {
+  transform: translateY(-50%) scale(1);
 }
 
 .bg-gradient {
@@ -615,7 +611,7 @@ body {
   gap: 369px;
   height: 549px;
   z-index: -1;
-  margin-top: -150px;
+  margin-top: -170px;
 }
 #footer .credit {
   align-self: center;
