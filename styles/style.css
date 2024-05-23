@@ -14,9 +14,6 @@ body {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   overflow-x: hidden;
-}
-
-html {
   scroll-behavior: smooth;
 }
 
