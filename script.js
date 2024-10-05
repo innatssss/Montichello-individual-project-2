@@ -305,7 +305,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
     sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 60; // Offset for the navbar height
+      const sectionTop = section.offsetTop - 60; // navbar height
       const sectionHeight = section.offsetHeight;
       const sectionId = section.getAttribute("id");
 
@@ -325,18 +325,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   navbarLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
-      e.preventDefault(); // Prevent default anchor behavior
-      const targetId = this.getAttribute("href"); // Get target section ID from href
+      e.preventDefault(); // prevent default a tag behavior
+      const targetId = this.getAttribute("href"); // get target section ID from href
       const targetSection = document.querySelector(targetId);
 
-      // Scroll smoothly to the target section
+      // scroll smoothly to the target section
       window.scrollTo({
-        top: targetSection.offsetTop - 50, // Adjust the position based on navbar height
-        behavior: "smooth", // Enable smooth scroll behavior
+        top: targetSection.offsetTop - 50, // adjust the position
+        behavior: "smooth", // enable smooth scroll behavior
       });
     });
   });
 
-  // Add scroll event listener for highlighting active link
   window.addEventListener("scroll", highlightActiveLink);
 });
