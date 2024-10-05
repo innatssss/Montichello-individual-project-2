@@ -34,12 +34,13 @@ body {
   animation-fill-mode: forwards;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  height: -webkit-fill-available;
 }
 
 // scroll animation
 .sec {
   scroll-snap-align: start;
-  scroll-snap-stop: always;
+  // scroll-snap-stop: always;
   opacity: 0;
   -webkit-transform: translateY(50px) rotate(-5deg) translateZ(0);
   transform: translateY(50px) rotate(-5deg) translateZ(0);
@@ -48,7 +49,7 @@ body {
   transition-delay: 0.3s;
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
-  transition: 0.4s;
+  transition: 0.5s;
 }
 .inView {
   opacity: 1;
@@ -69,6 +70,7 @@ body {
   @include flex-container(column, center, center);
   background-size: cover;
   height: 950px;
+  min-height: -webkit-fill-available;
   position: relative;
   margin-top: 0;
   .top-nav {
@@ -116,6 +118,9 @@ body {
   }
 
   .socialMedia-nav {
+    a {
+      text-decoration: none;
+    }
     svg {
       margin: 1rem;
     }
@@ -137,11 +142,12 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
+    transition: 1s;
     li {
       width: 10px;
       position: relative;
       text-align: right;
-
+     
       span {
         display: inline-block;
         background: $dark-color;
@@ -206,10 +212,13 @@ body {
 
 // second page
 #whatWeDo {
-  margin-top: 100px;
+  min-height: -webkit-fill-available;
   .header-what-we-do {
     @include flex-container(column, center, center);
-    margin-bottom: 140px;
+    margin: 140px;
+    .header-gallery {
+      margin-top: 40px;
+    }
     h2 {
       @include upper-text(2.75rem);
       margin-top: 24px;
@@ -282,7 +291,6 @@ body {
 
 #latestNews {
   height: 1035px;
-  padding-top: 60px;
   position: relative;
   .svg-bg {
     position: absolute;
@@ -297,7 +305,11 @@ body {
 
   .header-latest-news {
     @include flex-container(column, center, center);
-    margin-bottom: 140px;
+    margin: 100px;
+
+    .svg-line {
+      margin: 40px;
+    }
 
     h2 {
       @include upper-text(2.75rem);
@@ -353,6 +365,10 @@ body {
   .slick-prev {
     translate: -50px;
 
+    &:hover {
+      transform: translateY(-20px);
+    }
+
     &:before {
       font-size: 4rem;
       color: transparent;
@@ -361,6 +377,10 @@ body {
   }
   .slick-next {
     padding-right: 80px;
+
+    &:hover {
+      transform: translateY(-20px);
+    }
 
     &:before {
       color: transparent;
@@ -383,9 +403,12 @@ body {
 #gallery {
   @include flex-container(column, center, center);
   padding-top: 120px;
+  min-height: -webkit-fill-available;
+  height: 1000px;
   .header-gallery {
     @include flex-container(column, center, center);
     margin-bottom: 100px;
+
     h2 {
       @include upper-text(2.75rem);
       margin-top: 24px;
@@ -573,6 +596,9 @@ body {
   }
   .socialMedia {
     align-self: center;
+    a {
+      text-decoration: none;
+    }
     svg {
       margin: 1rem;
     }
