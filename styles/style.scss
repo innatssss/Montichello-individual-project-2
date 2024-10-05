@@ -31,7 +31,7 @@
     -moz-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
+    transition: all 0.5s ease-in;
   }
 }
 
@@ -116,9 +116,12 @@ body {
 
     h1 {
       @include logo(5rem);
+      @include glow();
     }
     h4 {
       @include upper-text(1.125rem);
+      @include glow();
+
       font-weight: 400;
     }
   }
