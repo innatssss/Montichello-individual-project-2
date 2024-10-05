@@ -15,15 +15,15 @@ body {
   animation-fill-mode: forwards;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  height: -webkit-fill-available;
 }
 
 .sec {
   scroll-snap-align: start;
-  scroll-snap-stop: always;
   opacity: 0;
   transform: translateY(50px) rotate(-5deg) translateZ(0);
   transition-delay: 0.3s;
-  transition: 0.4s;
+  transition: 0.5s;
 }
 
 .inView {
@@ -46,6 +46,7 @@ body {
   align-items: center;
   background-size: cover;
   height: 950px;
+  min-height: -webkit-fill-available;
   position: relative;
   margin-top: 0;
 }
@@ -111,6 +112,9 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
   transform: translateY(-20px);
 }
+.flex-header .socialMedia-nav a {
+  text-decoration: none;
+}
 .flex-header .socialMedia-nav svg {
   margin: 1rem;
 }
@@ -130,6 +134,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  transition: 1s;
 }
 .navbar ul li {
   width: 10px;
@@ -190,14 +195,17 @@ body {
 }
 
 #whatWeDo {
-  margin-top: 100px;
+  min-height: -webkit-fill-available;
 }
 #whatWeDo .header-what-we-do {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 140px;
+  margin: 140px;
+}
+#whatWeDo .header-what-we-do .header-gallery {
+  margin-top: 40px;
 }
 #whatWeDo .header-what-we-do h2 {
   text-transform: uppercase;
@@ -298,7 +306,6 @@ body {
 
 #latestNews {
   height: 1035px;
-  padding-top: 60px;
   position: relative;
 }
 #latestNews .svg-bg {
@@ -316,7 +323,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 140px;
+  margin: 100px;
+}
+#latestNews .header-latest-news .svg-line {
+  margin: 40px;
 }
 #latestNews .header-latest-news h2 {
   text-transform: uppercase;
@@ -382,6 +392,9 @@ body {
 #latestNews .slick-prev {
   translate: -50px;
 }
+#latestNews .slick-prev:hover {
+  transform: translateY(-20px);
+}
 #latestNews .slick-prev:before {
   font-size: 4rem;
   color: transparent;
@@ -389,6 +402,9 @@ body {
 }
 #latestNews .slick-next {
   padding-right: 80px;
+}
+#latestNews .slick-next:hover {
+  transform: translateY(-20px);
 }
 #latestNews .slick-next:before {
   color: transparent;
@@ -410,6 +426,8 @@ body {
   justify-content: center;
   align-items: center;
   padding-top: 120px;
+  min-height: -webkit-fill-available;
+  height: 1000px;
 }
 #gallery .header-gallery {
   display: flex;
@@ -623,6 +641,9 @@ body {
 }
 #footer .socialMedia {
   align-self: center;
+}
+#footer .socialMedia a {
+  text-decoration: none;
 }
 #footer .socialMedia svg {
   margin: 1rem;

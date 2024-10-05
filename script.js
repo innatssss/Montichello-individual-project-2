@@ -222,24 +222,19 @@ $(() => {
 });
 
 // side navigation
-$(document).ready(function () {
-  $(window).on("scroll", function () {
-    var link = $(".navbar a.dot");
-    var top = $(window).scrollTop();
-
-    $(".sec").each(function () {
-      var id = $(this).attr("id");
-      var height = $(this).height();
-      var offset = $(this).offset().top - 100;
-      if (top >= offset && top < offset + height) {
-        link.removeClass("active");
-        $(".navbar")
-          .find('[data-scroll="' + id + '"]')
-          .addClass("active");
-      }
-    });
-  });
-});
+// $(document).ready(function () {
+//   $(".sec").each(function () {
+//     var id = $(this).attr("id");
+//     var height = $(this).height();
+//     var offset = $(this).offset().top - 100;
+//     if (top >= offset && top < offset + height) {
+//       link.removeClass("active");
+//       $(".navbar")
+//         .find('[data-scroll="' + id + '"]')
+//         .addClass("active");
+//     }
+//   });
+// });
 
 // fade anuimation
 
@@ -298,3 +293,49 @@ function isValidEmail(email) {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailPattern.test(email);
 }
+
+// smoose scroll on click
+// wait untill the all content load
+document.addEventListener("DOMContentLoaded", function () {
+  const navbarLinks = document.querySelectorAll(".navbar a.dot");
+  const sections = document.querySelectorAll(".sec");
+
+  // Function to highlight the active link on scroll
+  function highlightActiveLink() {
+    let scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 60; // navbar height
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute("id");
+
+      if (
+        scrollPosition >= sectionTop &&
+        scrollPosition < sectionTop + sectionHeight
+      ) {
+        navbarLinks.forEach((link) => {
+          link.classList.remove("active"); // Remove 'active' class from all links
+          if (link.getAttribute("href") === `#${sectionId}`) {
+            link.classList.add("active"); // Add 'active' class to the matching link
+          }
+        });
+      }
+    });
+  }
+
+  navbarLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault(); // prevent default a tag behavior
+      const targetId = this.getAttribute("href"); // get target section ID from href
+      const targetSection = document.querySelector(targetId);
+
+      // scroll smoothly to the target section
+      window.scrollTo({
+        top: targetSection.offsetTop - 50, // adjust the position
+        behavior: "smooth", // enable smooth scroll behavior
+      });
+    });
+  });
+
+  window.addEventListener("scroll", highlightActiveLink);
+});
