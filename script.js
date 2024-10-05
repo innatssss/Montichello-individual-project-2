@@ -255,6 +255,7 @@ function fadeIn() {
 fadeIn();
 
 // form validation
+
 function formValidation() {
   let isValid = true;
 
@@ -289,6 +290,7 @@ function formValidation() {
 }
 
 // valedate patterns
+
 function isValidEmail(email) {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailPattern.test(email);
@@ -296,6 +298,7 @@ function isValidEmail(email) {
 
 // smoose scroll on click
 // wait untill the all content load
+
 document.addEventListener("DOMContentLoaded", function () {
   const navbarLinks = document.querySelectorAll(".navbar a.dot");
   const sections = document.querySelectorAll(".sec");
@@ -338,4 +341,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   window.addEventListener("scroll", highlightActiveLink);
+});
+
+const navItems = document.querySelectorAll(".nav-bar__item");
+
+navItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    const targetId = this.getAttribute("data-target"); // Get target section ID
+    const targetSection = document.getElementById(targetId); // Find the section element
+
+    // Scroll to the target section smoothly
+    targetSection.scrollIntoView({ behavior: "smooth" });
+
+    // Update active class on clicked item
+    // document.querySelector(".list-active").classList.remove("list-active");
+    // this.classList.add("list-active");
+  });
 });
