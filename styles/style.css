@@ -67,6 +67,17 @@ body {
   align-items: center;
   width: 30vw;
   list-style: circle;
+  transition: 5000ms;
+}
+.flex-header .top-nav .nav-bar .nav-bar__item {
+  cursor: pointer;
+  color: #ffffff;
+  transition: all 0.2s ease-in;
+}
+.flex-header .top-nav .nav-bar .nav-bar__item:hover {
+  color: #ffffff;
+  text-shadow: 0px 0px 30px #ffffff;
+  transition: all 0.5s ease-in;
 }
 .flex-header .main-header {
   display: flex;
@@ -82,12 +93,28 @@ body {
   font-size: 5rem;
   text-transform: uppercase;
   font-weight: 700;
+  cursor: pointer;
+  color: #ffffff;
+  transition: all 0.2s ease-in;
+}
+.flex-header .main-header h1:hover {
+  color: #ffffff;
+  text-shadow: 0px 0px 30px #ffffff;
+  transition: all 0.5s ease-in;
 }
 .flex-header .main-header h4 {
   text-transform: uppercase;
   font-family: "Montserrat";
   font-size: 1.125rem;
+  cursor: pointer;
+  color: #ffffff;
+  transition: all 0.2s ease-in;
   font-weight: 400;
+}
+.flex-header .main-header h4:hover {
+  color: #ffffff;
+  text-shadow: 0px 0px 30px #ffffff;
+  transition: all 0.5s ease-in;
 }
 .flex-header .bottom-arrow {
   text-transform: uppercase;
